@@ -95,14 +95,6 @@ form.paypal{
     display: inline-block;
 }
 
-transform: rotate(-90deg);
-    position: fixed;
-    right: -54px;
-    top: 124px;
-    height: 35px;
-    width: 144px;
-}
-
 button.yourOrdersBtn{
     position: fixed;
     top: 114px;
