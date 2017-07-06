@@ -13,12 +13,13 @@ function equalHeight(group) {
 
 $(document).ready(function() {   
     equalHeight($(".thumbnail")); 
+    // array to calculate all costs
     var costs = new Array();
     function btnClicked() {
         var number = $(this).siblings('input').val();
             var name = $(this).parents('.thumbnail').find('h3').html();
             var price = $(this).parents('.thumbnail').find('.price').html().replace('$','');
-
+            // add new selected item to the orders list
             var newItem = $("<li class=''></li>"); 
             var newName = $("<h4></h4>").text(name + ' $' + price*number); 
             var newPrice = $("<p></p>").text('Price: $' + price); 
@@ -34,6 +35,7 @@ $(document).ready(function() {
             // summasion array
             var sum = costs.reduce((a, b) => a + b, 0);
             $('.total').text('$' + sum);
+            // Give the final price to the input field
             $("input[type=hidden][name=price]").val(sum);
             if($('.total').text() !== '$0'){
                 $('.buyNow').css('display','inline-block');
@@ -48,6 +50,7 @@ $(document).ready(function() {
             }
     }
         
+    // change the orders list properties when resizing the screen
     $(window).resize(function() {
       if($('.orderedItems ul').height() < ($(window).height()-100) && $(window).width() > 767){
             $('.sidebar-offcanvas').css("position","fixed");
@@ -56,10 +59,7 @@ $(document).ready(function() {
         }
     });
 
-//    $("#navbar ul li").click(function(){
-//        $(this).attr("class","active").siblings().removeClass("active");
-//    });
-    
+    // Change the main part of the page without changing the orders list
     $("#navbar ul li a").click(function(){
         $(this).parent().attr("class","active").siblings().removeClass("active");
         $.ajax({
