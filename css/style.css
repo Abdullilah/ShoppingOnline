@@ -1,0 +1,115 @@
+/* Start make all thumbnail with same height ... Cheack JS code*/
+.row { 
+    display: flex;
+    display: inline-block;
+}
+
+.thumbnail img { 
+    max-height: 220px; 
+    min-height: 220px;
+}
+
+.thumbnail .caption { 
+    height: calc(100% - 220px);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.thumbnail .caption > div { 
+    width: 100%; 
+}
+/* End make all thumbnail with same height */
+
+#navbar ul li a{
+    font-size: 18px;
+    font-family: cursive;
+}
+
+.navbar-brand{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.thumbnail h3{
+    font-weight: bold;
+    color: #AAA;
+}
+
+.jumbotron{
+    padding: 15px 20px;
+}
+
+.jumbotron h1{
+    font-weight: bold;
+    color: rgb(255, 117, 117);
+    font-family: cursive;
+}
+
+.addBtn{
+    width: 150px;
+    margin-top: 10px;
+}
+
+span.price{
+    position: absolute;
+    background-color: #87D37C;
+    padding: 5px 20px;
+    color: #FFF;
+    font-size: 18px;
+    top: 16px;
+}
+
+@media screen and (min-width: 767px) {
+    .sidebar-offcanvas{
+        position: fixed;
+        right: 20px;
+    }
+}
+
+.orderedItems h4{
+    color: red;
+}
+
+.orderedItems .buyNow{
+    margin-left: 20px;
+    display: none;
+}
+
+.orderedItems ul{
+    padding: 2px;
+}
+
+.orderedItems ul li{
+    list-style: none;
+    border: 1px solid #DDD;
+    padding: 0 15px;
+    margin-bottom: 2px;
+}
+.orderedItems ul li:last-child{
+    padding: 15px;
+}
+
+form.paypal{
+    display: inline-block;
+}
+
+transform: rotate(-90deg);
+    position: fixed;
+    right: -54px;
+    top: 124px;
+    height: 35px;
+    width: 144px;
+}
+
+button.yourOrdersBtn{
+    position: fixed;
+    top: 114px;
+    font-size: 14px;
+    right: -31px;
+    transform: rotate(-90deg);
+    z-index: 10;
+}
+
+    
